@@ -67,15 +67,15 @@ export default function App() {
           }
         </View>
 
-        <View style={styles.tags}>
-          {
-            SKILLS.map((skill)=>(
-              <View key={skill} style={styles.tag}>
-                <Text style={styles.tagText}>{skill}</Text>
-              </View>
-            ))
-          }
+        <View style={styles.skillsSection}>
+          <Text style={styles.skillsTitle}>Skills</Text>
+          <View style={styles.tags}>
+            {SKILLS.map((skill) => (
+              <Tag key={skill} label={skill} />
+            ))}
+          </View>
         </View>
+
         <View style={styles.actions}>
           <View style={[styles.button, styles.primaryButton]}>
               <Text style={[styles.buttonText,styles.primaryButtonText]}>Follow</Text>
@@ -231,21 +231,34 @@ const styles = StyleSheet.create({
     flexDirection:'row',
     flexWrap:'wrap',
     gap:8,
-    marginHorizontal: 20,
-    marginTop: 16,
   },
   tag:
   {
     backgroundColor:COLORS['primary-light'],
     borderRadius:20,
-    paddingHorizontal:8,
-    paddingVertical:5,  
+    paddingHorizontal:12,
+    paddingVertical:5,
+    
   },
   tagText:
   {
     fontSize:12,
     color:COLORS.primary,
     fontWeight:'600',
+  },
+  skillsSection:
+  {
+    marginHorizontal: 10,
+    marginTop: 16,  
+  },
+  skillsTitle:
+  {
+    textTransform: 'uppercase',
+    letterSpacing: 1,
+    fontSize: 12,
+    fontWeight: '700',
+    color: COLORS.muted,
+    marginBottom: 8,
   },
   actions:
   {
