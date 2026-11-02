@@ -60,8 +60,7 @@ export default function App() {
           {
             STATS.map((item, index)=>(
               <View key={item.label} style={[styles.stats, index < STATS.length -1 && styles.statsDivider]}>
-                <Text style={styles.statValue}>{item.value}</Text>
-                <Text style={styles.statlabel}>{item.label}</Text>
+                <StatItem label={item.label} value={item.value} />
               </View>
             ))
           }
