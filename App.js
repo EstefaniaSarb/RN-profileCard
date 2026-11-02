@@ -14,6 +14,23 @@ const STATS = [
 
 const SKILLS = ['React Native', 'JavaScript', 'UI Design', 'Git', 'Flexbox'];
 
+function StatItem({ label, value }) {
+  return (
+    <>
+      <Text style={styles.statValue}>{value}</Text>
+      <Text style={styles.statlabel}>{label}</Text>
+    </>
+  );
+}
+
+function Tag({ label }) {
+  return (
+    <View style={styles.tag}>
+      <Text style={styles.tagText}>{label}</Text>
+    </View>
+  );
+}
+
 export default function App() {
   return (
     <View style={styles.screen}>
