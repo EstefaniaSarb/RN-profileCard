@@ -1,4 +1,6 @@
 # ANSWERS
+
+## SNACK -- https://snack.expo.dev/@esarmientoba/profile-card
  
 ## 1. What is the default value of `flexDirection` in React Native? How is it different from CSS on the web?
  
